@@ -47,3 +47,6 @@ __pycache__/
 # Config locali e segreti
 .mcp.json
 .claude/
+
+# Documenti Tesi (ignorati su git ma presenti in locale)
+*.docx
