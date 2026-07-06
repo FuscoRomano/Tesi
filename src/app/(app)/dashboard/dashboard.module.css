@@ -1,0 +1,105 @@
+/* Layout della pagina Vista Clinica. */
+
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.intestazione {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.titolo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.sottotitolo {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* Griglia principale: tabella pazienti (sinistra) + dettaglio (destra). */
+.griglia {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 1100px) {
+  .griglia {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Colonna sinistra: ricerca + tabella + paginazione impilate. */
+.colonnaPazienti {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+/* Barra di ricerca live sopra la tabella. */
+.barraRicerca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.inputRicerca {
+  flex: 1;
+  min-width: 0;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  color: #0f172a;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.inputRicerca::placeholder {
+  color: #94a3b8;
+}
+
+.inputRicerca:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Contatore dei risultati a fianco della ricerca. */
+.contaRisultati {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+/* Messaggio quando la ricerca non produce risultati. */
+.nessunRisultato {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+  color: #64748b;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .pagina {
+    padding: 1.25rem;
+  }
+}

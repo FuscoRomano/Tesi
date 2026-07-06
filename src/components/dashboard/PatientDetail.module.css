@@ -1,0 +1,146 @@
+/* Vista Dettaglio del paziente: card WHOQOL + grafici. */
+
+.contenitore {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* --- Intestazione --- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+.nome {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.scoreBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  color: #ffffff;
+}
+
+.scoreLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.9;
+}
+
+.scoreValore {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* Colori semaforo del box Priority Score */
+.rosso {
+  background-color: #dc2626;
+}
+.giallo {
+  background-color: #f59e0b;
+}
+.verde {
+  background-color: #16a34a;
+}
+
+/* --- Card WHOQOL --- */
+.whoqolGriglia {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.whoqolCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+.whoqolEtichetta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.whoqolValore {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.whoqolBarraEsterna {
+  width: 100%;
+  height: 0.4rem;
+  background-color: #e2e8f0;
+  border-radius: 999px;
+}
+
+.whoqolBarraInterna {
+  height: 100%;
+  border-radius: 999px;
+}
+
+/* --- Grafici --- */
+.graficiGriglia {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.graficoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 1.25rem 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+.graficoTitolo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.graficoSub {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 960px) {
+  .whoqolGriglia {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .graficiGriglia {
+    grid-template-columns: 1fr;
+  }
+}

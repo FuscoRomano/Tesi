@@ -1,0 +1,118 @@
+/* Tabella dei pazienti con righe selezionabili e indicatori a semaforo. */
+
+.contenitore {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+.tabella {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.tabella thead th {
+  text-align: left;
+  padding: 0.85rem 1rem;
+  background-color: #f8fafc;
+  color: #64748b;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.scoreCol {
+  text-align: right;
+}
+
+.riga {
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.riga:hover {
+  background-color: #f1f5f9;
+}
+
+.riga td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+}
+
+.riga:last-child td {
+  border-bottom: none;
+}
+
+/* Riga attualmente selezionata: bordo blu a sinistra ed evidenziazione. */
+.rigaSelezionata {
+  background-color: #eff6ff;
+  box-shadow: inset 3px 0 0 #2563eb;
+}
+
+.rigaSelezionata:hover {
+  background-color: #eff6ff;
+}
+
+.nome {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* --- Pallino semaforo --- */
+.semaforo {
+  display: inline-block;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+}
+
+.rosso {
+  background-color: #dc2626;
+}
+.giallo {
+  background-color: #f59e0b;
+}
+.verde {
+  background-color: #16a34a;
+}
+
+/* --- Barra di avanzamento del dominio Salute Fisica --- */
+.barraEsterna {
+  position: relative;
+  width: 110px;
+  height: 0.5rem;
+  background-color: #e2e8f0;
+  border-radius: 999px;
+}
+
+.barraInterna {
+  height: 100%;
+  border-radius: 999px;
+  background-color: #2563eb;
+}
+
+.barraValore {
+  position: absolute;
+  top: -1.1rem;
+  right: 0;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* --- Badge del Priority Score (eredita i colori semaforo) --- */
+.scoreBadge {
+  display: inline-block;
+  min-width: 2.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #ffffff;
+}

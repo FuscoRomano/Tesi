@@ -1,0 +1,185 @@
+/* Pagina "Il mio profilo". Coerente con il tema chiaro dell'area applicativa. */
+
+.pagina {
+  max-width: 720px;
+}
+
+.intestazione {
+  margin-bottom: 1.75rem;
+}
+
+.titolo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.sottotitolo {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+/* Colonna di card */
+.griglia {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.85rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.cardTitolo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Badge del ruolo */
+.badgeRuolo {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #1d4ed8;
+  background-color: #dbeafe;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.rigaDoppia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.etichetta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.input {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.55rem;
+  font-size: 0.95rem;
+  color: #0f172a;
+  background-color: #f8fafc;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.aiuto {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Messaggi di esito */
+.errore {
+  font-size: 0.88rem;
+  color: #b91c1c;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.successo {
+  font-size: 0.88rem;
+  color: #15803d;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+/* Azioni */
+.azioniForm {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bottonePrimario {
+  padding: 0.65rem 1.25rem;
+  border: none;
+  border-radius: 0.55rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.bottonePrimario:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.bottonePrimario:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.bottoneLogout {
+  padding: 0.65rem 1.25rem;
+  border: 1px solid #fecaca;
+  border-radius: 0.55rem;
+  background-color: #fff;
+  color: #dc2626;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.bottoneLogout:hover:not(:disabled) {
+  background-color: #fef2f2;
+  border-color: #f87171;
+}
+
+.bottoneLogout:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive: una colonna per nome/cognome su schermi stretti */
+@media (max-width: 560px) {
+  .rigaDoppia {
+    grid-template-columns: 1fr;
+  }
+}

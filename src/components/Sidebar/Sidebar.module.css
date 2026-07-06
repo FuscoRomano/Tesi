@@ -1,0 +1,71 @@
+/* Stile della barra di navigazione laterale. */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 260px;
+  min-height: 100vh;
+  padding: 1.5rem 1rem;
+  background-color: #0f172a; /* blu notte */
+  color: #e2e8f0;
+}
+
+/* Intestazione con il nome della piattaforma */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.5rem 0.75rem 1.5rem;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.15);
+  margin-bottom: 1.5rem;
+}
+
+.brandTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.brandSubtitle {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* Contenitore del menu */
+.nav {
+  flex: 1;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+/* Singolo link di navigazione */
+.navLink {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.5rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.navLink:hover {
+  background-color: rgba(148, 163, 184, 0.15);
+  color: #ffffff;
+}
+
+/* Stato attivo: evidenzia la sezione corrente */
+.navLinkActive {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.navLinkActive:hover {
+  background-color: #2563eb;
+}

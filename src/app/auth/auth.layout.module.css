@@ -1,0 +1,8 @@
+/* Shell delle pagine auth: flex centrato a tutta altezza, sfondo neutro. */
+.authShell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}

@@ -1,0 +1,29 @@
+/* Stile dello "shell" applicativo: griglia a due colonne (Sidebar + contenuto). */
+
+.appShell {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/*
+ * Colonna a destra della Sidebar: impila Topbar (azioni utente) e contenuto.
+ */
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0; /* evita overflow orizzontale dentro un flex item */
+}
+
+/*
+ * Area dei contenuti principale.
+ * Occupa tutto lo spazio rimanente sotto la Topbar ed è scrollabile in autonomia.
+ */
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 2rem 2.5rem;
+  overflow-y: auto;
+  background-color: #f5f7fa;
+}
